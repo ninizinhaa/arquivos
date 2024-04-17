@@ -3,11 +3,12 @@
 #include <stdlib.h>
 
 int main(){
-  FILE * arquivo;
-  arquivo = fopen("DadosEntrada.csv", "r");
-  if (arquivo == NULL) {
-printf("Erro ao abrir o arquivo.\n");
-exit(1);
+  FILE *entrada = fopen("DadosEntrada.csv", "r");
+    FILE *saida = fopen("SituacaoFinal.csv", "w");
+
+    if (entrada == NULL || saida == NULL) {
+        printf("Erro ao abrir os arquivos.\n");
+        return 1;
 }
 
  Alunos alunos;
