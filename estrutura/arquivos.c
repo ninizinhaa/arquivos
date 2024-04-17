@@ -2,6 +2,18 @@
 #include <string.h>
 #include <stdlib.h>
 
+int main(){
+  FILE * arquivo;
+  arquivo = fopen("DadosEntrada.csv", "r");
+  if (arquivo == NULL) {
+printf("Erro ao abrir o arquivo.\n");
+exit(1);
+}
+
+ Alunos alunos;
+  
+}
+
 typedef Struct{
   char nome[100];
   int numero_telefone[50];
@@ -16,14 +28,4 @@ double Calcular_Nota(double N1, double N2){
   return(resultado);
 }
 
-int main(){
-  FILE * arquivo;
-  arquivo = fopen("DadosEntrada.csv", "r");
-  if (arquivo == NULL) {
-printf("Erro ao abrir o arquivo.\n");
-exit(1);
-}
 
- Alunos alunos;
-  
-}
