@@ -2,4 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-0
+int main(){
+  
+}
