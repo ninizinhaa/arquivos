@@ -5,10 +5,16 @@
 int main(){
   FILE *entrada = fopen("DadosEntrada.csv", "r");
   FILE *saida = fopen("SituacaoFinal.csv", "w");
-
-    if (entrada == NULL || saida == NULL) {
+  
+if (entrada == NULL || saida == NULL) {
         printf("Erro ao abrir os arquivos.\n");
-        return 1;
+        exit(1);
+      Alunos alunos[100];
+    int i = 0;
+    while (fscanf(entrada, "%s %s %f %f\n", alunos[i].nome, alunos[i].curso, &alunos[i].N1, &alunos[i].N2) != EOF) {
+        i++; }
+  
+     Separar_cursos(alunos, i);
 }
 
  Alunos alunos;
@@ -34,6 +40,13 @@ double Calcular_Nota(double N1, double N2){
   else {
     printf("REPROVADO");
   }
+}
+
+void Separar_cursos (Alunos alunos[], int tamanho) {
+    for (int i = 0; i < tamanho; i++) {
+        printf("Curso: %s\n", alunos[i].curso);
+        printf("Aluno: %s, Notas: %.2f, %.2f\n", alunos[i].nome, alunos[i].N1, alunos[i].N2);
+    }
 }
 
 
