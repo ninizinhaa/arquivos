@@ -3,5 +3,10 @@
 #include <stdlib.h>
 
 int main(){
-  printf("its me hi");
+  FILE * arquivo
+  arquivo = fopen("DadosEntrada.csv", "r");
+  if (arquivo == NULL) {
+printf("Erro ao abrir o arquivo.\n");
+exit(1);
+}
 }
