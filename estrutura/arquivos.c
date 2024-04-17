@@ -26,6 +26,13 @@ double Calcular_Nota(double N1, double N2){
   double resultado;
   resultado = (N1 + N2) / 2;
   return(resultado);
+  
+  if (resultado >= 7) {
+    printf("APROVADO");
+  }
+  else {
+    printf("REPROVADO");
+  }
 }
 
 
