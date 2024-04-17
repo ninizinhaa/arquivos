@@ -4,7 +4,7 @@
 
 int main(){
   FILE *entrada = fopen("DadosEntrada.csv", "r");
-    FILE *saida = fopen("SituacaoFinal.csv", "w");
+  FILE *saida = fopen("SituacaoFinal.csv", "w");
 
     if (entrada == NULL || saida == NULL) {
         printf("Erro ao abrir os arquivos.\n");
