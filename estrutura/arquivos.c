@@ -3,6 +3,7 @@
 #include <stdlib.h>
 
 int main(){
+  char nome;
   FILE *entrada = fopen("DadosEntrada.csv", "r");
   FILE *saida = fopen("SituacaoFinal.csv", "w");
   
@@ -35,10 +36,10 @@ double Calcular_Nota(double N1, double N2){
   return(resultado);
   
   if (resultado >= 7) {
-    printf("APROVADO");
+    printf("nome, "%2f,"APROVADO");
   }
   else {
-    printf("REPROVADO");
+    printf("nome, "%2f,"REPROVADO");
   }
 }
 
