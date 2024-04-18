@@ -35,10 +35,10 @@ double Calcular_Nota(double N1, double N2){
   return(resultado);
   
   if (resultado >= 7) {
-    printf("nome, "%2f,"APROVADO");
+    printf("nome, "%.2f,"APROVADO");
   }
   else {
-    printf("nome, "%2f,"REPROVADO");
+    printf("nome, "%.2f,"REPROVADO");
   }
 }
 
