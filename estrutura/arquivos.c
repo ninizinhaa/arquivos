@@ -3,7 +3,6 @@
 #include <stdlib.h>
 
 int main(){
-  char nome;
   FILE *entrada = fopen("DadosEntrada.csv", "r");
   FILE *saida = fopen("SituacaoFinal.csv", "w");
   
