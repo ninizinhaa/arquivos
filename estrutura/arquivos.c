@@ -28,6 +28,7 @@ const char* Aprovado_Reprovado (float media){
 int main(){
   system("cls");
   Alunos alunos[100];
+  char Linha[100];
   int i = 0;
 
   FILE *entrada = fopen("DadosEntrada.csv", "r");
@@ -39,7 +40,8 @@ int main(){
     }
     
 
-  while (fscanf(entrada, "%[^,],%[^,],%[^,],%f,%f\n", alunos[i].nome, alunos[i].telefone, alunos[i].curso, &alunos[i].N1, &alunos[i].N2) != EOF) {
+  while (fgets(Linha, sizeof(Linha), entrada) != NULL) {
+        while (fscanf(entrada, "%[^,],%[^,],%[^,],%f,%f\n", alunos[i].nome, alunos[i].telefone, alunos[i].curso, &alunos[i].N1, &alunos[i].N2) != EOF) {
         i++; 
     }
 
@@ -49,8 +51,12 @@ int main(){
         fprintf(saida, "%s, %.2f, %s\n", alunos[j].nome, media, situacao);
     }
 
+}
+
   fclose(entrada);
   fclose(saida);
+
+  printf("O arquivo'SituacaoFinal.csv' foi criado com sucesso!");
 
 }
 
